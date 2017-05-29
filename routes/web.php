@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $file = file_get_contents(base_path() . '/web/html/header.html');
+
+//    return response($file);
+    return $file;
+    redirect('/home');
+});
+
+Route::group(['namespace' => 'Home'], function () {
+
 });

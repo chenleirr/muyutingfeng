@@ -1,0 +1,25 @@
+.chenlei {
+    height: 320px;
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(64, 172, 110)), to(rgb(53, 153, 208)));
+}
+.buttonPosition {
+    background-color: rgb(64, 172, 110);
+    margin-top: 30px;
+    margin-left: 20px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.buttonPosition:hover {
+    color: white !important;
+    background-color: lightseagreen !important;
+}
+.titleContainer {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    margin: 0 auto;
+    max-width : 800px;
+    overflow : hidden;
+    padding-left : 20px;
+    padding-right : 20px;
+}
