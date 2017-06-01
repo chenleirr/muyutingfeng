@@ -9,19 +9,27 @@
 
     <title>沐雨听风阁</title>
 
-    <link rel="shortcut icon" href="/web/img/icon/yun.ico">
+    <link rel="shortcut icon" href="/web/custom/img/icon/yun.ico">
     <script type="text/javascript" src="/node_modules/vue/dist/vue.min.js"></script>
-    <script type="text/javascript" src="/web/js/hello.js"></script>
-    <link href="/web/css/w3.css" rel="stylesheet" />
-    <link href="/web/css/custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="/web/custom/js/hello.js"></script>
+    <link href="/web/custom/css/w3.css" rel="stylesheet" />
+    <link href="/web/custom/css/custom.css" rel="stylesheet" />
 
 </head>
 <body>
 
 <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none;z-index:4" id="mySidebar">
-    <a href="#" class="w3-bar-item w3-button"><i class="glyphicon glyphicon-home"></i>   home</a>
-    <i class="fa fa-search"></i><a href="#" class="w3-bar-item w3-button"><i class="wechat"></i>php</a>
-    <i class="wechat"></i> <a href="#" class="w3-bar-item w3-button"><i class="wechat"></i>mysql</a>
+    <a href="#"><img class="custom_img1" src="/web/custom/img/icon/Doggy.jpg"></a>
+    <a href="/" class="custom_button1"><span class="custom_span1">首页</span></a>
+    <div class="dropdown">
+        <a href="#" class="custom_button1"><span class="custom_span1">技术笔记</span></a>
+        <div class="dropdown-content">
+            <a href="#" class="custom_a1">Link 1</a>
+            <a href="#" class="custom_a1">Link 2</a>
+            <a href="#" class="custom_a1">Link 3</a>
+        </div>
+    </div>
+    <a class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
 </div>
 
 <div id="myOverlay" class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
@@ -30,7 +38,7 @@
 <div class="w3-container w3-teal w3-blue chenlei">
     <button class="w3-button w3-round-xlarge w3-border w3-border-white buttonPosition" onclick="w3_open()">Menu</button>
     <div class="titleContainer">
-        <h1>沐雨听风</h1>
+        <h1>沐雨听风阁</h1>
         <h4>Keep going!</h4>
     </div>
 </div>

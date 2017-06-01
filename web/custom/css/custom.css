@@ -1,0 +1,110 @@
+.chenlei {
+    height: 320px;
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(64, 172, 110)), to(rgb(53, 153, 208)));
+}
+.buttonPosition {
+    background-color: rgb(64, 172, 110);
+    margin-top: 30px;
+    margin-left: 20px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.buttonPosition:hover {
+    color: white !important;
+    background-color: lightseagreen !important;
+}
+.titleContainer {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    margin: 0 auto;
+    max-width : 800px;
+    overflow : hidden;
+    padding-left : 20px;
+    padding-right : 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    top: -20px;
+    left:0;
+}
+
+.dropdown-content .custom_a1 {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content .custom_a1:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.custom_img1 {
+    /*text-align: center;*/
+    /*background-color: inherit;*/
+
+    display: block;
+    border-radius: 100%;
+    width: 75%;
+    margin: 20px auto;
+}
+
+.custom_button1 {
+    display: block;
+    border-radius: 16px;
+    background-color: #2ab27b;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 70%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px auto;
+    border: 2px solid #ffffff;
+}
+
+.custom_button1 .custom_span1 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.custom_button1 .custom_span1:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.custom_button1:hover {
+    background-color: lightseagreen;
+}
+
+.custom_button1:hover .custom_span1 {
+    padding-right: 25px;
+}
+
+.custom_button1:hover .custom_span1:after {
+    opacity: 1;
+    right: 0;
+}

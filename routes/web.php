@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $file = file_get_contents(base_path() . '/web/html/header.html');
+    $file = file_get_contents(base_path() . '/web/custom/html/header.html');
 
 //    return response($file);
     return $file;
