@@ -2,6 +2,7 @@
 
 //首页
 Route::get('/', function () {
-    $file = file_get_contents(base_path() . '/web/custom/html/header.html');
-    return $file;
+    return redirect('/home');
 });
+
+Route::get('/home', 'App\Modules\Home\Controllers\HomePage@index');
