@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,25 +10,25 @@
     <title>沐雨听风阁</title>
 
     <link rel="shortcut icon" href="/web/custom/img/icon/yun.ico">
-    <script type="text/javascript" src="/node_modules/vue/dist/vue.min.js"></script>
     <link href="/web/custom/css/w3.css" rel="stylesheet" />
     <link href="/web/custom/css/custom.css" rel="stylesheet" />
+    {%block name="css"%}{%/block%}
 
 </head>
 <body>
 
 <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none;z-index:4" id="mySidebar">
-    <a href="#"><img class="custom_img1" src="/web/custom/img/icon/Doggy.jpg"></a>
+    <a href="/"><img class="custom_img1" src="/web/custom/img/icon/Doggy.jpg"></a>
     <a href="/" class="custom_button1"><span class="custom_span1">首页</span></a>
     <div class="dropdown">
         <a href="#" class="custom_button1"><span class="custom_span1">技术笔记</span></a>
         <div class="dropdown-content">
-            <a href="#" class="custom_a1">PHP</a>
-            <a href="#" class="custom_a1">Laravel</a>
-            <a href="#" class="custom_a1">Mysql</a>
+            <a href="/notes/php" class="custom_a1">PHP</a>
+            <a href="/notes/laravel" class="custom_a1">Laravel</a>
+            <a href="/nodes/mysql" class="custom_a1">Mysql</a>
         </div>
     </div>
-    <a class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
+    <a href="/" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
 </div>
 
 <div id="myOverlay" class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
@@ -40,6 +40,10 @@
         <h1>沐雨听风阁</h1>
         <h4>Keep going!</h4>
     </div>
+</div>
+
+<div>
+    {%block name="main"%}{%/block%}
 </div>
 
 <script>
