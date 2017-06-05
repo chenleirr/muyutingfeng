@@ -12,7 +12,14 @@
     <link rel="shortcut icon" href="/web/custom/img/icon/yun.ico">
     <link href="/web/custom/css/w3.css" rel="stylesheet" />
     <link href="/web/custom/css/custom.css" rel="stylesheet" />
+    <script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
     {%block name="css"%}{%/block%}
+    {%block name="js"%}{%/block%}
 
 </head>
 <body>
