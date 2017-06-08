@@ -10,4 +10,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    //格式化输出
+    protected function formatOutput($result)
+    {
+        return [
+            'code' => config('custom_code.success.code'),
+            'msg' => '成功',
+            'info' => $result
+        ];
+    }
 }

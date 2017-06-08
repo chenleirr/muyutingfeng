@@ -6,6 +6,15 @@ use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
+use Log;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -42,9 +51,69 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $e)
     {
-        return parent::render($request, $exception);
+        if ($e instanceof NotFoundHttpException) {
+            return Response(['code' => 404, 'msg' => '您访问的地址不存在。']);
+        }
+
+        if ($e instanceof MethodNotAllowedHttpException) {
+            return Response(['code' => 405, 'msg' => '请求方法错误(GET or POST)。']);
+        }
+
+        if ($e instanceof ModelNotFoundException) {
+            $e = new NotFoundHttpException($e->getMessage(), $e);
+        }
+
+        if ($e instanceof InternalException) {
+            return Response(['code' => 500, 'msg' => '内部错误，请重试或联系客服。']);
+        }
+
+
+        if ($e instanceof BeeperException) {
+            $this->logException($request, $e, $e->getLogLevel());
+        } else {
+            $this->logException($request, $e);
+        }
+
+        $err = [
+            'message' => $e->getMessage(),
+            'file' => $e->getFile(),
+            'line' => $e->getLine(),
+            'code' => $e->getCode(),
+            'url' => $request->url(),
+            'input' => $request->all(),
+        ];
+        $response = [
+            'code' => $err['code'] ? $err['code'] : config('custom_code.server_error.code'),
+            'msg' => $err['message'],
+            'debug' => $err,
+        ];
+
+        return response()->json($response);
+    }
+
+    private function logException($request, Exception $e, $errorLevel = 'error')
+    {
+        $err = [
+            'message' => $e->getMessage(),
+            'file' => $e->getFile(),
+            'line' => $e->getLine(),
+            'code' => $e->getCode(),
+            'url' => $request->url(),
+            'input' => $request->all(),
+        ];
+
+        switch ($errorLevel) {
+            case 'error':
+                Log::error($err);
+                break;
+            case 'warning':
+                Log::warning($err);
+                break;
+            default:
+                Log::info($err);
+        }
     }
 
     /**

@@ -15,8 +15,6 @@ class HomePage
         return [
             'tpl' => 'Home/home.tpl',
             'data' => [
-                'name' => 'Ray',
-                'age' => 18,
             ]
         ];
     }

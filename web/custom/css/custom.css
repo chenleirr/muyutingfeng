@@ -109,3 +109,8 @@
     opacity: 1;
     right: 0;
 }
+.custom_article {
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+}

@@ -16,4 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/get_data', 'App\Modules\Home\Controllers\HomeApi@getData');
+
+Route::group(['namespace' => 'App\Modules\Home\Controllers', 'prefix' => 'article'], function () {
+    Route::post('insert', 'HomeApi@insert');
+    Route::get('get_by_id', 'HomeApi@getById');
+});
