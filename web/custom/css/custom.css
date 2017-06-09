@@ -111,6 +111,6 @@
 }
 .custom_article {
     width: 70%;
-    text-align: center;
+    text-align: -webkit-auto;
     margin-left: 15%;
 }
