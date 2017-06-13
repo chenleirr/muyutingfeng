@@ -28,14 +28,14 @@
     <a href="/"><img class="custom_img1" src="/web/custom/img/icon/Doggy.jpg"></a>
     <a href="/" class="custom_button1"><span class="custom_span1">首页</span></a>
     <div class="dropdown">
-        <a href="#" class="custom_button1"><span class="custom_span1">技术笔记</span></a>
+        <a class="custom_button1"><span class="custom_span1">技术笔记</span></a>
         <div class="dropdown-content">
-            <a href="/notes/php" class="custom_a1">PHP</a>
-            <a href="/notes/laravel" class="custom_a1">Laravel</a>
-            <a href="/nodes/mysql" class="custom_a1">Mysql</a>
+            <a href="/home?type=php" class="custom_a1">PHP</a>
+            <a href="/home?type=laravel" class="custom_a1">Laravel</a>
+            <a href="/home?type=mysql" class="custom_a1">Mysql</a>
         </div>
     </div>
-    <a href="/" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
+    <a href="/home?type=" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
 </div>
 
 <div id="myOverlay" class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>

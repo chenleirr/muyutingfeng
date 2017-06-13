@@ -1,13 +1,21 @@
 define(function (require) {
     var util = require('../common/util');
+    var config = JSON.parse($('#input_config').val());
+    var type_str = util.getURLParameter('type');
+    var type_config = config[type_str] || {};
+    var type_code = type_config.code || 0;
     var obj = {
         url : '/api/article/get_list',
         type : 'GET',
         params : {}
     };
+    if (type_code) {
+        obj.params.group = type_code;
+    }
 
     function init() {
         util.ajax(obj, function (data) {
+            console.log();
             var info = data.info || {};
             var list = info.list || {};
 

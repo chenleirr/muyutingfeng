@@ -15,6 +15,7 @@ class HomePage
         return [
             'tpl' => 'Home/home.tpl',
             'data' => [
+                'config' => json_encode(config('constants.group')),
             ]
         ];
     }

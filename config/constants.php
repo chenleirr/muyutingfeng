@@ -14,21 +14,22 @@ return [
         ],
     ],
     'group' => [
-        'other' => [
-            'dont_touch' => [
-                'code' => 101,
-                'desc' => '随笔'
-            ],
+        'dont_touch' => [
+            'code' => 101,
+            'desc' => '随笔'
         ],
-        'technical' => [
-            'laravel' => [
-                'code' => 201,
-                'desc' => 'Laravel'
-            ],
-            'mysql' => [
-                'code' => 202,
-                'desc' => 'Mysql'
-            ],
+//=====================================
+        'laravel' => [
+            'code' => 201,
+            'desc' => 'Laravel'
+        ],
+        'mysql' => [
+            'code' => 202,
+            'desc' => 'Mysql'
+        ],
+        'php' => [
+            'code' => 203,
+            'desc' => 'PHP'
         ],
     ],
 ];
