@@ -21,4 +21,9 @@ class HomeRepository
     {
         return ArticleService::getById($id);
     }
+
+    public function getList($params)
+    {
+        return ArticleService::getList($params);
+    }
 }

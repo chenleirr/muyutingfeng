@@ -20,6 +20,7 @@ class ArticleModel extends Model
      */
     protected $fillable = [
         'title',
+        'title_pic',
         'content',
 
         'read',

@@ -109,8 +109,27 @@
     opacity: 1;
     right: 0;
 }
-.custom_article {
+.content_container {
     width: 70%;
     text-align: -webkit-auto;
     margin-left: 15%;
+}
+.block_container {
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 5%;
+    float: left;
+}
+.block_img {
+    display: block;
+    width: 75%;
+    margin: 20px auto;
+}
+.block_text {
+    text-align: center;
+    padding: 10px 20px;
+}
+.block_text_a {
+    text-decoration:none;
 }

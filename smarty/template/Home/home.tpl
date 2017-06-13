@@ -8,5 +8,7 @@
 {%/block%}
 
 {%block name="main"%}
-    <!--<p>Your name is: <input type="text" id="name" value=""></p>-->
+    <div class="content_container" id="content_container">
+
+    </div>
 {%/block%}

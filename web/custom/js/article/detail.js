@@ -6,17 +6,23 @@ define(function (require) {
         url : '/api/article/get_by_id',
         type : 'GET',
         params : {
-            id : 6
+            id : util.getURLParameter('id')
         }
     };
 
     function init() {
         util.ajax(obj, function (data) {
-            var content = data.info.content;
+            var info = data.info || {};
+            var content = info.content || '';
 
-            var html = converter.makeHtml(content);
+            if (content !== '') {
+                var html = converter.makeHtml(content);
 
-            $('#main_content').html(html);
+                $('#main_title').html(data.info.title);
+                $('#main_content').html(html);
+            } else {
+                $('#main_content').html('<h4>没有找到文章内容!</h4>');
+            }
         });
     }
 

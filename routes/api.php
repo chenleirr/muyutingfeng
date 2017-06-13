@@ -20,4 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'App\Modules\Home\Controllers', 'prefix' => 'article'], function () {
     Route::post('insert', 'HomeApi@insert');
     Route::get('get_by_id', 'HomeApi@getById');
+    Route::get('get_list', 'HomeApi@getList');
 });

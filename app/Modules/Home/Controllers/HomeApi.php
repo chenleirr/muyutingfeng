@@ -4,6 +4,7 @@ namespace App\Modules\Home\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Home\Requests\InsertArticleRequest;
+use App\Modules\Home\Requests\ListArticleRequest;
 use App\Exceptions\CustomException;
 use App\Modules\Home\Repositories\HomeRepository;
 use Illuminate\Http\Request;
@@ -25,6 +26,7 @@ class HomeApi extends Controller
         }
         $params = array_only($request->all(), [
             'title',
+            'title_pic',
             'content',
         ]);
         $params['status'] = config('constants.article.status.normal.code');//正常
@@ -45,6 +47,17 @@ class HomeApi extends Controller
         }
 
         $result = $this->homeRepository->getById($articleId);
+        return $this->formatOutput($result);
+    }
+
+    public function getList(ListArticleRequest $request) {
+        $params['status'] = config('constants.article.status.normal.code');
+        $params['page'] = $request->get('page', 1);
+        $params['perpage'] = 10;
+        if (!empty($request->get('group'))) {
+            $params['group'] = $request->get('group');
+        }
+        $result = $this->homeRepository->getList($params);
         return $this->formatOutput($result);
     }
 }

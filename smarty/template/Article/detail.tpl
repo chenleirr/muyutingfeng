@@ -8,7 +8,7 @@
 {%/block%}
 
 {%block name="main"%}
-    <div class="custom_article">
+    <div class="content_container">
         <link href="/web/custom/css/markdown.css" rel="stylesheet" />
         <style>
             .markdown-body {

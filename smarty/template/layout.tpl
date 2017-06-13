@@ -44,8 +44,8 @@
 <div class="w3-container w3-teal w3-blue chenlei">
     <button class="w3-button w3-round-xlarge w3-border w3-border-white buttonPosition" onclick="w3_open()">Menu</button>
     <div class="titleContainer">
-        <h1>沐雨听风阁</h1>
-        <h4>Keep going!</h4>
+        <h1><div id="main_title">沐雨听风阁</div></h1>
+        <h4><div id="sub_title">Keep going!</div></h4>
     </div>
 </div>
 

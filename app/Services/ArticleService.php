@@ -17,6 +17,7 @@ class ArticleService extends ModelRepository
     {
         $this->model->fill(array_only($data, [
             'title',
+            'title_pic',
             'content',
             'read',
             'group',
@@ -33,5 +34,23 @@ class ArticleService extends ModelRepository
             throw new CustomException('需要数字类型的id');
         }
         return $this->model->find($id);
+    }
+
+    public function getList($params)
+    {
+        $params = array_only($params, [
+            'group',
+            'status'
+        ]);
+        $page = array_get($params, 'page', 1);
+        $perPage = array_get($params, 'perpage', 10);
+        $condition = [];
+        foreach ($params as $key => $value) {
+            array_push($condition, [$key, '=', $value]);
+        }
+        $query = $this->buildQuery($condition);
+        $result = $this->buildList($query, $page, $perPage);
+
+        return $result;
     }
 }
