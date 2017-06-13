@@ -12,6 +12,8 @@ class InsertArticleRequest extends Request
             'key' => 'required|string',
 
             'title' => 'required|string|min:1|max:50',
+            'title_pic' => 'required|string',
+            'group' => 'required|integer',
             'content' => 'required|string|min:1',
         ];
     }

@@ -19,7 +19,7 @@ define(function (require) {
                         '<img src="' + (item.title_pic || '/web/custom/img/icon/Doggy.jpg') +'" class="block_img">'+
                         '</a>'+
                         '<div class="block_text">'+
-                        '<a href="/article/detail" class="block_text_a"><p>' + item.title +'</p></a>'+
+                        '<a href="' + url + '" class="block_text_a"><p>' + item.title +'</p></a>'+
                         '</div>'+
                         '</div>';
 

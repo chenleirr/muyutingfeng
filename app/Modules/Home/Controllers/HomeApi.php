@@ -28,9 +28,10 @@ class HomeApi extends Controller
             'title',
             'title_pic',
             'content',
+            'group'
         ]);
         $params['status'] = config('constants.article.status.normal.code');//正常
-        $params['group'] = config('constants.group.other.dont_touch.code');//随笔
+        //$params['group'] = config('constants.group.other.dont_touch.code');//随笔
 
         $result = $this->homeRepository->insert($params);
 
