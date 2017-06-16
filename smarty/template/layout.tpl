@@ -18,6 +18,10 @@
         crossorigin="anonymous">
     </script>
     <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
+    <script src="/web/vex/js/vex.combined.min.js"></script>
+    <link rel="stylesheet" href="/web/vex/css/vex.css" />
+    <link rel="stylesheet" href="/web/vex/css/vex-theme-default.css" />
+
     {%block name="css"%}{%/block%}
     {%block name="js"%}{%/block%}
 

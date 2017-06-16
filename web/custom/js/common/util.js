@@ -1,8 +1,13 @@
 /**
  * Created by Ray on 17/6/2.
  */
-define(function () {
+define(function (require) {
     var util = {};
+    var vex = require('/web/vex/js/vex.combined');
+
+    vex.defaultOptions.className = 'vex-theme-default';
+    vex.dialog.buttons.YES.text = '好的';
+    vex.dialog.buttons.NO.text = '取消';
 
     util.ajax = function (obj, callback) {
         $.ajax({
@@ -19,10 +24,10 @@ define(function () {
                     $('#loadingBox').hide();
                 }
                 if (result && result.status === 401) {
-                    tip('登录验证已经过期，请重新登录!~', 'error');
+                    vex.dialog.alert('获取失败');
 
                     setTimeout(function() {
-                        window.location.href = '/new/login';
+                        window.location.href = '/home';
                     }, 1500);
                     return;
                 }
@@ -37,10 +42,14 @@ define(function () {
         });
     };
 
+    //获取url中的参数
     util.getURLParameter = function (name) {
         return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)')
                 .exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
     };
+
+    //vex
+    util.vex = vex;
 
     return util;
 });

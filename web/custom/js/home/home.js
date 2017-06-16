@@ -15,7 +15,6 @@ define(function (require) {
 
     function init() {
         util.ajax(obj, function (data) {
-            console.log();
             var info = data.info || {};
             var list = info.list || {};
 

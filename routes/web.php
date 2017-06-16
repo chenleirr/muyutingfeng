@@ -7,3 +7,4 @@ Route::get('/', function () {
 
 Route::get('/home', 'App\Modules\Home\Controllers\HomePage@index');
 Route::get('/article/detail', 'App\Modules\Article\Controllers\ArticlePage@index');
+Route::get('/article/edit', 'App\Modules\Article\Controllers\ArticlePage@edit');
