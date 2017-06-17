@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="/web/vex/css/vex.css" />
     <link rel="stylesheet" href="/web/vex/css/vex-theme-default.css" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     {%block name="css"%}{%/block%}
     {%block name="js"%}{%/block%}
 
@@ -40,6 +43,7 @@
         </div>
     </div>
     <a href="/home?type=" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
+    <a href="/article/edit" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">写文章</span></a>
 </div>
 
 <div id="myOverlay" class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
@@ -55,6 +59,10 @@
 
 <div>
     {%block name="main"%}{%/block%}
+</div>
+
+<div id="backtop">
+    <a href="#"><span class="glyphicon glyphicon-arrow-up"></span></a>
 </div>
 
 <script>

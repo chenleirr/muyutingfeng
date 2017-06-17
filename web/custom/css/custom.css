@@ -2,6 +2,30 @@
     height: 320px;
     background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(64, 172, 110)), to(rgb(53, 153, 208)));
 }
+#backtop {
+    text-align: center;
+}
+#backtop a {
+    position: fixed;
+    bottom: 50px; /* 小按钮到浏览器底边的距离 */
+    right: 50px; /* 小按钮到浏览器右边框的距离 */
+    color: white; /* 小按钮中文字的颜色 */
+    width: 50px;
+    height: 50px;
+    background: rgb(64, 172, 110); /* 小按钮底色 */
+    z-index: 1000;
+    padding: 10px; /* 小按钮中文字到按钮边缘的距离 */
+    border-radius: 8px; /* 小按钮圆角的弯曲程度（半径）*/
+    -moz-border-radius: 4px;
+    font-weight: normal; /* 小按钮中文字的粗细 */
+    text-decoration: none !important;
+}
+#backtop a:hover {
+    background: rgb(53, 153, 208); /* 文字颜色 */
+}
+#backtop span {
+    top: 7px;
+}
 .buttonPosition {
     background-color: rgb(64, 172, 110);
     margin-top: 30px;
