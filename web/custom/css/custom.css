@@ -30,12 +30,39 @@
     background-color: rgb(64, 172, 110);
     margin-top: 30px;
     margin-left: 20px;
-    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 .buttonPosition:hover {
     color: white !important;
-    background-color: lightseagreen !important;
+    background-color: rgb(53, 153, 208) !important;
+}
+.customer_center_in {
+    background-color: rgb(53, 153, 208);
+    margin-top: 30px;
+    margin-right: 20px;
+    transition-duration: 0.4s;
+    float: right;
+    text-decoration: none !important;//无下划线
+}
+.customer_center_in:hover {
+    color: white !important;
+    background-color: rgb(64, 172, 110) !important;
+}
+.customer_center_not {
+    background-color: rgb(53, 153, 208);
+    margin-top: 30px;
+    margin-right: 20px;
+    transition-duration: 0.4s;
+    float: right;
+    text-decoration: none !important;//无下划线
+}
+.customer_center_not:hover {
+    color: white !important;
+    background-color: rgb(64, 172, 110) !important;
+}
+.head_button {
+    position: inherit;
+    text-align: inherit;
 }
 .titleContainer {
     position: relative;
@@ -43,7 +70,6 @@
     text-align: center;
     margin: 0 auto;
     max-width : 800px;
-    overflow : hidden;
     padding-left : 20px;
     padding-right : 20px;
 }
@@ -123,6 +149,7 @@
 
 .custom_button1:hover {
     background-color: lightseagreen;
+    color: white;
 }
 
 .custom_button1:hover .custom_span1 {
@@ -208,4 +235,13 @@
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+}
+.register_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 48%;
+    margin-left: 26%;
+    text-align: left;
+    float: left;
 }
