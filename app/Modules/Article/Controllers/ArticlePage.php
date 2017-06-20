@@ -2,23 +2,19 @@
 
 namespace App\Modules\Article\Controllers;
 
-class ArticlePage
+use App\Http\Controllers\Controller;
+
+class ArticlePage extends Controller
 {
     public function index()
     {
-        return [
-            'tpl' => 'Article/detail.tpl',
-            'data' => [
-            ]
-        ];
+        $this->setTpl('Article/detail.tpl');
+        return $this->tplOutput();
     }
 
     public function edit()
     {
-        return [
-            'tpl' => 'Article/edit.tpl',
-            'data' => [
-            ]
-        ];
+        $this->setTpl('Article/edit.tpl');
+        return $this->tplOutput();
     }
 }

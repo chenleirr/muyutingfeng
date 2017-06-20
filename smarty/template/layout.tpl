@@ -43,14 +43,29 @@
         </div>
     </div>
     <a href="/home?type=" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
+    {%if $info.user.name%}
     <a href="/article/edit" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">写文章</span></a>
+    {%/if%}
 </div>
 
 <div id="myOverlay" class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
 
 
 <div class="w3-container w3-teal w3-blue chenlei">
-    <button class="w3-button w3-round-xlarge w3-border w3-border-white buttonPosition" onclick="w3_open()">Menu</button>
+    <div class="head_button">
+        <div><button class="w3-button w3-round-xlarge w3-border w3-border-white buttonPosition" onclick="w3_open()">Menu</button>
+        {%if $info.user.name%}
+            <a class="w3-button w3-round-xlarge w3-border w3-border-white customer_center_in" onclick="customer_center_open()">
+                <span id="customer_center_span">{%$info.user.name%}</span>
+            </a>
+        </div>
+        {%else%}
+        <a href="/login" class="w3-button w3-round-xlarge w3-border w3-border-white customer_center_not"">
+            <span id="customer_center_span">登录</span>
+        </a>
+        </div>
+        {%/if%}
+    </div>
     <div class="titleContainer">
         <h1><div id="main_title">沐雨听风阁</div></h1>
         <h4><div id="sub_title">Keep going!</div></h4>
@@ -73,6 +88,9 @@
     function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
+    }
+    function customer_center_open() {
+
     }
 </script>
 

@@ -8,6 +8,7 @@ use App\Modules\Home\Requests\ListArticleRequest;
 use App\Exceptions\CustomException;
 use App\Modules\Home\Repositories\HomeRepository;
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeApi extends Controller
 {

@@ -11,3 +11,4 @@ npm-debug.log
 .env
 .DS_Store
 web/.DS_Store
+dump.rdb

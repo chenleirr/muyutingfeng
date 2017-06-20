@@ -18,7 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'App\Modules\Home\Controllers', 'prefix' => 'article'], function () {
-    Route::post('insert', 'HomeApi@insert');
+    Route::post('insert', 'HomeApi@insert')->middleware('auth');
     Route::get('get_by_id', 'HomeApi@getById');
     Route::get('get_list', 'HomeApi@getList');
+});
+
+Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
+    Route::post('login', 'LoginController@login')->middleware('guest');
+    Route::post('register', 'RegisterController@register');
+    Route::get('logout', 'LoginController@logout');
 });
