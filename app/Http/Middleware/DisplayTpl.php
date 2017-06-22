@@ -38,7 +38,7 @@ class DisplayTpl
                 if ($this->display($display)) {
                     return $output;
                 } elseif (isset($output['tpl'])) {
-
+                    $output['data']['csrf_token'] = csrf_token();
                     try {
                         ob_start();
                         $this->renderTpl($output['tpl'], $output['data']);

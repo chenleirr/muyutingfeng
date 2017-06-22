@@ -9,6 +9,11 @@ define(function (require) {
     vex.dialog.buttons.YES.text = '好的';
     vex.dialog.buttons.NO.text = '取消';
 
+    $.ajaxPrefilter(function(options, originalOptions, jqXhr) {
+        jqXhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
+        options.cache = false;
+    });
+
     util.ajax = function (obj, callback) {
         $.ajax({
             url: obj.url,
