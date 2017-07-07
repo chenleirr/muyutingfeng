@@ -212,7 +212,7 @@
     box-sizing: border-box;
 }
 .button_mobile {
-    width: 80%;
+    width: 74%;
 }
 .edit_input_submit {
     width: 200px;
@@ -226,7 +226,7 @@
     cursor: pointer;
 }
 .button_send {
-    width: 18%;
+    width: 20%;
     height: 45px;
     float: right;
 }
