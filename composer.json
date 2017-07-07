@@ -6,11 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "doctrine/dbal": "*",
+        "guzzlehttp/guzzle": "6.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "predis/predis": "^1.1",
-        "smarty/smarty": "^3.1",
-        "doctrine/dbal": "*"
+        "smarty/smarty": "^3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -22,6 +23,7 @@
             "database"
         ],
         "psr-4": {
+            "AliyunSdkSms\\": "app/Libs/AliyunSdk/Sms/aliyun-php-sdk-core/",
             "App\\": "app/"
         }
     },

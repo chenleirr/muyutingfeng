@@ -56,5 +56,15 @@ define(function (require) {
     //vex
     util.vex = vex;
 
+    util.test_phone = function (phone_num){
+            var reg =  /^(((1[3-8]{1}))+\d{9})$/; //正则表达式用于判断手机号是否合法
+
+            if (phone_num.length === 11 && phone_num.match(reg)) {
+                return true;
+            } else {
+                return false;
+            }
+    };
+
     return util;
 });

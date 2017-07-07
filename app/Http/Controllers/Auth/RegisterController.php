@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Exceptions\CustomException;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -9,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use App\Http\Requests\Auth\RegisterRequest;
+use Redis;
 
 class RegisterController extends Controller
 {
@@ -43,6 +45,12 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
+        $checkCode = $request->get('check_code');
+        $mobile = $request->get('mobile');
+        $checkCodeRedis = Redis::get('SmsCode' . $mobile);
+        if ($checkCode != $checkCodeRedis) {
+            throw new CustomException('验证码有误!');
+        }
         event(new Registered($user = $this->create($request->all())));
 
         $this->guard()->login($user);
