@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="baidu-site-verification" content="u96Yd8ekeS" />
 
     <meta name="csrf-token" content="{%$info.csrf_token%}">
 
@@ -65,6 +64,9 @@
             </a>
         </div>
         {%else%}
+        <a href="/register" class="w3-button w3-round-xlarge w3-border w3-border-white customer_center_not">
+            <span id="customer_center_span">注册</span>
+        </a>
         <a href="/login" class="w3-button w3-round-xlarge w3-border w3-border-white customer_center_not">
             <span id="customer_center_span">登录</span>
         </a>

@@ -17,7 +17,11 @@
             <input type="text" name="name" class="edit_input_text" placeholder="不能超过10个字符"><br>
 
             <label>手机:</label><br>
-            <input type="text" name="mobile" class="edit_input_text" placeholder="请输入11位手机号码"><br>
+            <input type="text" id="register_mobile" name="mobile" class="edit_input_text button_mobile" placeholder="请输入11位手机号码">
+            <input id="send_sms_code" type="button" class="edit_input_submit button_send" value="发送"><br>
+
+            <label>验证码:</label><br>
+            <input type="text" name="check_code" class="edit_input_text" placeholder="请输入手机验证码"><br>
 
             <label>邮箱:</label><br>
             <input type="text" name="email" class="edit_input_text" placeholder="您的邮箱"><br>

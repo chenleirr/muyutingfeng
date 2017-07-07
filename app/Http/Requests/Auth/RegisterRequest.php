@@ -12,6 +12,7 @@ class RegisterRequest extends Request
             'name' => 'required|string|max:10',
             'mobile' => 'required|string|min:11|max:11|unique:users',
             'email' => 'required|string|email|max:255',
+            'check_code' => 'required|integer',
             'password' => 'required|string|min:6|confirmed',
         ];
     }

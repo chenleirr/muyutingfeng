@@ -227,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'ArticleService' => \App\Facades\ArticleServiceFacade::class,
+        'RequestApi' => \App\Facades\RequestApiServiceFacade::class,
     ],
 
 ];
