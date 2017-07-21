@@ -31,5 +31,13 @@ return [
             'code' => 203,
             'desc' => 'PHP'
         ],
+        'nginx' => [
+            'code' => 204,
+            'desc' => 'Nginx'
+        ],
+        'web' => [
+            'code' => 205,
+            'desc' => '网络'
+        ],
     ],
 ];
