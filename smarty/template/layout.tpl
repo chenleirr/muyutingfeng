@@ -41,6 +41,7 @@
             <a href="/home?type=laravel" class="custom_a1">Laravel</a>
             <a href="/home?type=mysql" class="custom_a1">Mysql</a>
             <a href="/home?type=nginx" class="custom_a1">Nginx</a>
+            <a href="/home?type=web" class="custom_a1">网络</a>
         </div>
     </div>
     <a href="/home?type=" class="custom_button1" style="vertical-align:middle"><span class="custom_span1">别点这儿 </span></a>
