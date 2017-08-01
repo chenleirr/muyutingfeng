@@ -24,7 +24,10 @@ define(function (require) {
 
         vex.dialog.confirm({
             message : '确定要保存吗?',
-            callback : function () {
+            callback : function (value) {
+                if (!value) {
+                    return;
+                }
                 util.ajax(obj, function (data) {
                     var code = data.code;
 
