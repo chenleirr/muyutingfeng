@@ -2,7 +2,7 @@ define(function (require) {
 
     var util = require('../common/util');
     var vex = util.vex;
-    var showdown = require('https://cdn.rawgit.com/showdownjs/showdown/1.7.1/dist/showdown.min');
+    var showdown = require('/web/showdown/js/showdown.min');
     var converter = new showdown.Converter();
     var show_show = true;
     var hide_val = '隐藏>>';
