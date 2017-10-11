@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\get_github_user_id;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,6 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        Commands\get_github_user_id::class,
     ];
 
     /**
