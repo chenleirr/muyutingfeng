@@ -31,4 +31,5 @@ Route::group(['namespace' => 'App\Modules\Home\Controllers', 'prefix' => 'articl
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::post('send_check_code', 'SendSmsController@sendByAliyun');
+    Route::get('get_json', 'Json@get_json');
 });
