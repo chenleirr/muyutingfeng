@@ -8,13 +8,13 @@ class Json extends Controller
 {
     public function get_json(JsonRequest $request)
     {
-        $prj_name = $request->get('prj_name');
-        $module1_key = $request->get('module1_key');
-        $module1_val = $request->get('module1_val');
-        $module2_key = $request->get('module2_key');
-        $module2_val = $request->get('module2_val');
-        $module3_key = $request->get('module3_key');
-        $module3_val = $request->get('module3_val');
+        $prj_name = $request->get('prj_name', 'fruit');
+        $module1_key = $request->get('module1_key', 'apple');
+        $module1_val = $request->get('module1_val', '苹果');
+        $module2_key = $request->get('module2_key', 'pear');
+        $module2_val = $request->get('module2_val', '梨');
+        $module3_key = $request->get('module3_key', 'banana');
+        $module3_val = $request->get('module3_val', '香蕉');
         
         
         return [
