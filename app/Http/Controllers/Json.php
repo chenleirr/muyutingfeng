@@ -3,9 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\JsonRequest;
+use Illuminate\Http\Request;
 
 class Json extends Controller
 {
+    public function json(Request $request)
+    {
+        $json = $request->get("json");
+        $json = @json_decode($json, true);
+        if (empty($json)) {
+            return "{}";
+        }
+
+        return $json;
+    }
+
     public function get_json(JsonRequest $request)
     {
         $prj_name = $request->get('prj_name', 'fruit');
